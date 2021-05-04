@@ -1,0 +1,31 @@
+#about {
+    padding: 30px 0;
+}
+
+#about :global(.container) {
+    max-width: 700px;
+    text-align: center;
+}
+
+.image {
+    max-width: 300px;
+    display: inline-block;
+}
+
+.image img {
+    max-width: 100%;
+    width: 100%;
+}
+
+#about h2 {
+    color: var(--text-blue);
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: var(--text-blue);
+    margin: .5rem 0;
+}

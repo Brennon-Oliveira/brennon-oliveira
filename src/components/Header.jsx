@@ -12,16 +12,16 @@ export default function Header(){
                 <nav>
                     <ul>
                         <li>
-                            <Link to="Home" >Home</Link>
+                            <Link activeClass="active" to="Home" spy={true} smooth={true} offset={50} duration={500} >Home</Link>
                         </li>
                         <li>
-                            <Link to="Home">Sobre</Link>
+                            <Link activeClass="active" to="About" spy={true} smooth={true} offset={50} duration={500}>Sobre</Link>
                         </li>
                         <li>
-                            <Link to="Home">Serviços</Link>
+                            <Link activeClass="active" to="Services" spy={true} smooth={true} offset={50} duration={500}>Serviços</Link>
                         </li>
                         <li>
-                            <Link activeClass="active" to="Home" to="test1" spy={true} smooth={true} offset={50} duration={500}>Contato</Link>
+                            <Link activeClass="active" to="Contact" spy={true} smooth={true} offset={50} duration={500}>Contato</Link>
                         </li>
                     </ul>
                 </nav>
