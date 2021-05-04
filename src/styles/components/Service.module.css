@@ -1,0 +1,48 @@
+#service {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+#service:not(:first-of-type) {
+    margin-top: 59px;
+}
+
+#service > div {
+    border: 1px solid var(--red);
+    min-width: 140px;
+    min-height: 140px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#service div span {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+#service div div {
+    position: absolute;
+    bottom: -60px;
+    height: 60px;
+    width: 2px;
+    background-color: var(--red);
+}
+
+#service p {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0 2%;
+}
+
+@media screen and (max-width:720px) {
+    #service > div {
+        min-width: 120px;
+        min-height: 120px;
+    }
+}
