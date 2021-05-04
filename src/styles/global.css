@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+h1, h2, a {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+}
+
+p, span, button {
+    font-family: 'Open Sans';
+}
+
+@media (max-width: 1080px){
+    html {
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 720px){
+    html {
+        font-size: 87.5%;
+    }
+}
