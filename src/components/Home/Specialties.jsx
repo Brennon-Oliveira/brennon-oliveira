@@ -8,6 +8,9 @@ import jsBanner from './../../images/specialties/javascriptBanner.jpg'
 import phpBanner from './../../images/specialties/phpBanner.jpg'
 import mysqlBanner from './../../images/specialties/mysqlBanner.jpg'
 import webDesingBanner from './../../images/specialties/webDesingBanner.jpg'
+import nodejsBanner from './../../images/specialties/nodejsBanner.jpg'
+import reactjsBanner from './../../images/specialties/reactjsBanner.jpg'
+import reactNativeBanner from './../../images/specialties/reactNativeBanner.jpg'
 import { Element } from 'react-scroll';
 
 export default function Specialties(){
@@ -19,6 +22,9 @@ export default function Specialties(){
         {title:'PHP',icon:'fab fa-php', image:phpBanner,text:'Sistemas seguros e completos no servidor usando PHP!'},
         {title:'MySql',icon:'fas fa-database', image:mysqlBanner,text:'Banco de dados eficiente e completo para armazenar informações!'},
         {title:'Web Desing',icon:'fas fa-paint-brush', image:webDesingBanner,text:'Sites estilosos criados a cara da sua marca!'},
+        {title:'NodeJS',icon:'fab fa-node-js', image:nodejsBanner,text:'Servidores dedicados e rápidos com NodeJS'},
+        {title:'ReactJS',icon:'fab fa-react', image:reactjsBanner,text:'Sites dinâmicos e completos para seus trabalhos!'},
+        {title:'React Native',icon:'fas fa-mobile-alt', image:reactNativeBanner,text:'Aplicações mobile nativas com React Native!'},
     ])
 
     return(
