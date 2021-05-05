@@ -56,14 +56,16 @@
     background-color: #af5b00;
 }
 
+#contact a {
+    font-size: 1.25rem;
+}
+
 #contact :global(.report) {
     color: var(--red);
-    font-size: 1rem;
 }
 
 #contact :global(.contact) {
     color: var(--green);
-    font-size: 1rem;
 }
 
 #contact a:hover {
