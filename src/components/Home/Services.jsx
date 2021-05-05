@@ -13,6 +13,9 @@ export default function Services(){
         'Sistema de estoque e armazenamento',
         'E-Mail Marketing para fidelizar seus clientes',
         'Google ads e outras formas de alavancar o seu site',
+        'Aplicativos mobile para Android e IOS',
+        'Bots de busca e coleta de dados',
+        'Automações e outros robôs',
     ])
 
     return(
