@@ -38,6 +38,7 @@
     text-align: center;
     font-size: 1.25rem;
     padding: 0 2%;
+    color: var(--text-blue);
 }
 
 @media screen and (max-width:720px) {

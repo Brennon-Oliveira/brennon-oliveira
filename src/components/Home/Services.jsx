@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Service from './../Service';
 import style from './../../styles/components/home/Services.module.css';
+import { Element } from 'react-scroll';
 
 export default function Services(){
 
@@ -16,7 +17,7 @@ export default function Services(){
 
     return(
         <section id={style.services}>
-            <div className="container">
+            <Element name='Services' className="container">
                 <h2>Serviços</h2>
                 <div className={style.servicesContainer}>
                     {
@@ -31,7 +32,7 @@ export default function Services(){
                     }
                     
                 </div>
-            </div>
+            </Element>
         </section>
     )
 }

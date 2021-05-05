@@ -25,13 +25,20 @@ h1, h2, a {
 section h2 {
     color: var(--text-blue);
     font-size: 1.7rem;
-    margin-top: 1rem;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 p, span, button {
     font-family: 'Open Sans';
+}
+
+.formError {
+    border: 2px solid var(--red);
+    color: var(--red);
+    font-weight: 600;
+    font-size: 1.10rem;
 }
 
 @media (max-width: 1080px){

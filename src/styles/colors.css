@@ -2,14 +2,16 @@
     --white: #FFFFFF;
     --gray: #34363B;
     --dark-gray: #1F2232;
+    --line: #011e2c;
     --black: #0c0c0c;
-    --specialty: #DBD393;
+    --specialties: #DBD393;
     --text-blue: #003048;
     --contact: #013047;
     --services-red:#D62727;
     --green: #00FF00;
     --yellow: #FFFF00;
     --orange: #F77F00;
+    --orange: #d36d00;
     --pink: #FDE6E9;
     --red: #FF0000;
 }
