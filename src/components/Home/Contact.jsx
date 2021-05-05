@@ -6,6 +6,20 @@ import InputMask from "react-input-mask";
 
 export default function Contact(){
 
+    const [isContact, setIsContact] = useState(true);
+
+    const [nameForm, setNameForm] = useState('Entre em contato');
+    const [emailForm, setEmailForm] = useState('contato@brennonaleatorio.com.br');
+    const [linkForm, setLinkForm] = useState('Reportar um erro');
+    const [messageForm, setMessageForm] = useState('Mensagem...');
+    const [submitForm, setSubmitForm] = useState('Enviar!');
+    const [formTemplate, setFormTemplate] = useState('CONTACT_FORM');
+    const [linkClass, setLinkClass] = useState('report');
+
+    const [sucessMessage, setSucessMessage] = useState('Messagem enviada com sucesso!😃');
+    const [errorMessage, setErrorMessage] = useState('Houve um erro ao envia a mensagem!😢');
+    const [waitMessage, setWaitMessage] = useState('Calma! Estamos enviando sua mensagem!🕐');
+
     const [isSending, setIsSending] = useState(false);
 
     const [name, setName] = useState('');
@@ -21,7 +35,7 @@ export default function Contact(){
     function submit(e){
         e.preventDefault();
         if(isSending){
-            alert("Calma! Estamos enviando sua mensagem!");
+            alert(waitMessage);
             return false
         }
         if(name === ''){
@@ -57,16 +71,16 @@ export default function Contact(){
             return false
         }
         setIsSending(true);
-        emailjs.sendForm('service_7zwr6sd', 'CONTACT_FORM', e.target, "user_HZpQGea5eCHlOIxwiWhKO")
+        emailjs.sendForm('service_7zwr6sd', formTemplate, e.target, "user_HZpQGea5eCHlOIxwiWhKO")
         .then((result) => {
-            alert('Messagem enviada com sucesso!😃');
+            alert(sucessMessage);
             setName('');
             setEmail('');
             setNumber('');
             setMessage('');
             setIsSending(false);
-        }, (error) => {
-            alert('Houve um erro ao envia a mensagem!😢');
+        }, () => {
+            alert(errorMessage);
             setIsSending(false);
         });
     }
@@ -102,19 +116,52 @@ export default function Contact(){
         }
     }
 
+    function changeForm(){
+        if(!isContact){
+            setNameForm('Entre em contato');
+            setEmailForm('contato@brennonaleatorio.com.br');
+            setLinkForm('Reportar um erro');
+            setMessageForm('Mensagem...');
+            setSubmitForm('Enviar!');
+            setFormTemplate('CONTACT_FORM');
+            setLinkClass('report');
+
+            setSucessMessage('Messagem enviada com sucesso!😃');
+            setErrorMessage('Houve um erro ao enviar a mensagem!😢');
+            setWaitMessage('Calma! Estamos enviando sua mensagem!🕐');
+
+            setIsContact(true)
+        } else {
+            setNameForm('Reporte um erro');
+            setEmailForm('report@brennonaleatorio.com.br');
+            setLinkForm('Entrar em contato');
+            setMessageForm('Reporte...');
+            setSubmitForm('Reportar!');
+            setFormTemplate('REPORT_FORM');
+            setLinkClass('contact');
+
+            setSucessMessage('Reporte enviado com sucesso!😃');
+            setErrorMessage('Houve um erro ao enviar o reporte!😢');
+            setWaitMessage('Calma! Estamos enviando seu reporte!🕐');
+
+            setIsContact(false)
+        }
+    }
+
     return(
         <section id={style.contact}>
             <Element name="Contact" className="container">
-                <h2>Entre em contato</h2>
-                <p>E-Mail: contato@brennonaleatorio.com.br</p>
+                <h2>{nameForm}</h2>
+                <p>E-Mail: {emailForm}</p>
+                <a className={linkClass} onClick={changeForm}>{linkForm}</a>
                 <form onSubmit={e =>submit(e)} id={style.form}>
                     <div><input onClick={()=>{nameReset()}} onChange={e=>setName(e.target.value)} value={name} id='name' name="name" type="text" placeholder="Nome..."/></div>
                     <div><input onClick={()=>{emailReset()}} onChange={e=>setEmail(e.target.value)} value={email} id='email' name='email' type="email" placeholder="E-Mail..."/></div>
                     <div><InputMask mask='+55 (99) 99999-9999' onClick={()=>{numberReset()}} onChange={e=>setNumber(e.target.value)} value={number} id='number' name="number" type="text" placeholder="Telefone..."/></div>
                     <div>
-                        <textarea onClick={()=>{messageReset()}} onChange={(e)=>{setMessage(e.target.value)}} value={message} id='message' name='message' placeholder='Mensagem...'></textarea>
+                        <textarea onClick={()=>{messageReset()}} onChange={(e)=>{setMessage(e.target.value)}} value={message} id='message' name='message' placeholder={messageForm}></textarea>
                     </div>
-                    <div><button>Enviar!</button></div>
+                    <div><button>{submitForm}</button></div>
                 </form>
             </Element>
         </section>
