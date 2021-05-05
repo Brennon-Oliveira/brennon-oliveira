@@ -3,6 +3,10 @@
     padding: 1rem 0;
 }
 
+.mobile{
+    display:none;
+}
+
 #header :global(.container) {
     display: flex;
     justify-content:space-between;
@@ -18,7 +22,7 @@
     text-decoration: underline;
 }
 
-#header ul {
+#header ul.desktop {
     display: flex;
     gap: 1.5rem;
 }
@@ -29,7 +33,51 @@
     transition: font-size .3s;
 }
 
-#header ul a:hover {
+#header ul.desktop a:hover {
     text-decoration: underline;
     font-size: 1.5rem;
+}
+
+#header i {
+    display: none;
+    font-size: 2rem;
+    color:var(--white);
+    cursor: pointer;
+}
+
+@media screen and (max-width:720px) {
+
+    #header ul.desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile ul {
+        position: absolute;
+        top: 61px;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-color: var(--dark-gray);
+        z-index: 99;
+    }
+
+    .mobile ul a {
+        display:inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--black);
+    }
+
+    .mobile ul a:hover {
+        text-decoration: underline;
+    }
+
+    #header .mobile i {
+        display:block;
+    }
 }
