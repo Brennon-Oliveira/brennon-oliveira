@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import style from './../../styles/components/home/Contact.module.css';
+import emailjs from 'emailjs-com';
 import { Element } from 'react-scroll';
+import InputMask from "react-input-mask";
 
 export default function Contact(){
+
+    const [isSending, setIsSending] = useState(false);
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -16,6 +20,10 @@ export default function Contact(){
 
     function submit(e){
         e.preventDefault();
+        if(isSending){
+            alert("Calma! Estamos enviando sua mensagem!");
+            return false
+        }
         if(name === ''){
             setNameVoid(true);
             document.getElementById("name").classList.add('formError');
@@ -33,7 +41,6 @@ export default function Contact(){
         if(number === ''){
             setNumberVoid(true);
             document.getElementById("number").classList.add('formError');
-            setNumber('Campos vazios não são permitidos')
             return false
         }
 
@@ -43,9 +50,21 @@ export default function Contact(){
             setMessage('Campos vazios não são permitidos');
             return false
         }
-        
-
-        alert('Nome: '+name+'\nNumero: '+number+'\nemail: '+email+'\nMensagem: '+message);
+        if(number[number.length - 1] === '_'){
+            setNumberVoid(true);
+            document.getElementById("number").classList.add('formError');
+            alert('Insira seu número completo')
+            return false
+        }
+        setIsSending(true);
+        emailjs.sendForm('service_7zwr6sd', 'CONTACT_FORM', e.target, "user_HZpQGea5eCHlOIxwiWhKO")
+        .then((result) => {
+            alert('Messagem enviada com sucesso!😃');
+            setIsSending(false);
+        }, (error) => {
+            alert('Houve um erro ao envia a mensagem!😢');
+            setIsSending(false);
+        });
     }
 
     function nameReset(){
@@ -67,7 +86,6 @@ export default function Contact(){
     function numberReset(){
         if(numberVoid){
             document.getElementById("number").classList.remove('formError');
-            setNumber('')
             setNumberVoid(false);
         }
     }
@@ -88,7 +106,7 @@ export default function Contact(){
                 <form onSubmit={e =>submit(e)} id={style.form}>
                     <div><input onClick={()=>{nameReset()}} onChange={e=>setName(e.target.value)} value={name} id='name' name="name" type="text" placeholder="Nome..."/></div>
                     <div><input onClick={()=>{emailReset()}} onChange={e=>setEmail(e.target.value)} value={email} id='email' name='email' type="email" placeholder="E-Mail..."/></div>
-                    <div><input onClick={()=>{numberReset()}} onChange={e=>setNumber(e.target.value)} value={number} id='number' name="number" type="text" placeholder="Telefone..."/></div>
+                    <div><InputMask mask='+55 (99) 99999-9999' onClick={()=>{numberReset()}} onChange={e=>setNumber(e.target.value)} value={number} id='number' name="number" type="text" placeholder="Telefone..."/></div>
                     <div>
                         <textarea onClick={()=>{messageReset()}} onChange={(e)=>{setMessage(e.target.value)}} value={message} id='message' name='message' placeholder='Mensagem...'></textarea>
                     </div>

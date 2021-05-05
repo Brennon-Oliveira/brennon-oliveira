@@ -8,7 +8,7 @@ export default function Header(){
         <header id={style.header}>
             <Element name="Home" className="container">
                 <h1>
-                    <Link to="Home">Brennon Oliveira</Link>
+                    <Link activeClass="active" to="Home" spy={true} smooth={true} offset={-30} duration={500}>Brennon Oliveira</Link>
                 </h1>
                 <nav>
                     <ul className={style.desktop}>
