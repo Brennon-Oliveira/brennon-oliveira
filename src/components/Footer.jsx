@@ -1,4 +1,3 @@
-import react from 'react';
 import { Link } from 'react-scroll';
 import style from './../styles/components/Footer.module.css';
 

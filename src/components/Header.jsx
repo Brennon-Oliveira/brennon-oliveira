@@ -1,4 +1,3 @@
-import react from 'react';
 import { Link, Element} from 'react-scroll';
 import style from './../styles/components/Header.module.css';
 import SlideToggle from "react-slide-toggle";
@@ -31,7 +30,7 @@ export default function Header(){
                     noDisplayStyle
                     render={({ toggle, setCollapsibleElement }) => (
                         <div className={style.mobile}>
-                        <i class="fas fa-bars" id="menuMobile" aria-hidden="true" onClick={toggle}></i>
+                        <i className="fas fa-bars" id="menuMobile" aria-hidden="true" onClick={toggle}></i>
                             <ul ref={setCollapsibleElement}>
                                 <li>
                                     <Link activeClass="active" to="Home" spy={true} smooth={true} offset={-30} duration={500} >Home</Link>

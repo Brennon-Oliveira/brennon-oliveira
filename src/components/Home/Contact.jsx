@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import style from './../../styles/components/home/Contact.module.css';
 import emailjs from 'emailjs-com';
 import { Element } from 'react-scroll';
@@ -60,6 +60,10 @@ export default function Contact(){
         emailjs.sendForm('service_7zwr6sd', 'CONTACT_FORM', e.target, "user_HZpQGea5eCHlOIxwiWhKO")
         .then((result) => {
             alert('Messagem enviada com sucesso!😃');
+            setName('');
+            setEmail('');
+            setNumber('');
+            setMessage('');
             setIsSending(false);
         }, (error) => {
             alert('Houve um erro ao envia a mensagem!😢');
