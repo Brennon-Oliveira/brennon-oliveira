@@ -28,7 +28,7 @@ function App() {
       <Home />
       <Footer />
       {
-        scrollTop&&<Link to='home' className='upLink'>▲</Link>
+        scrollTop&&<Link  activeClass="active" to="Home" spy={true} smooth={true} offset={-30} duration={500} className='upLink'>▲</Link>
       }
     </div>
   );

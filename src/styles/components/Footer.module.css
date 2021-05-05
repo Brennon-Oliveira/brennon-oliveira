@@ -1,0 +1,39 @@
+#footer {
+    background-color: var(--gray);
+    padding: 1rem 0;
+}
+
+#footer :global(.container) {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#footer h1 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+#footer h1 a:hover {
+    text-decoration: underline;
+}
+
+#footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#footer ul a {
+    color: var(--white);
+    font-size: 1.25rem;
+    transition: color .3s;
+}
+
+#footer ul li:first-of-type a:hover {
+    color: var(--whatsapp);
+}
+
+#footer ul li:last-of-type a:hover {
+    color: var(--facebook);
+}

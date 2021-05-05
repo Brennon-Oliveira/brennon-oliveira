@@ -5,9 +5,9 @@ import style from './../styles/components/Header.module.css';
 export default function Header(){
     return (
         <header id={style.header}>
-            <Element name="home" className="container">
+            <Element name="Home" className="container">
                 <h1>
-                    <Link to="home">Brennon Oliveira</Link>
+                    <Link to="Home">Brennon Oliveira</Link>
                 </h1>
                 <nav>
                     <ul>
