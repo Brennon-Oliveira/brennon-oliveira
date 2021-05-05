@@ -1,7 +1,7 @@
 import React from 'react';
 import brennon from '../../images/brennon.jpg';
 import style from './../../styles/components/home/About.module.css';
-import { Element } from 'react-scroll';
+import { Element, Link } from 'react-scroll';
 
 export default function About(){
     return(
@@ -12,6 +12,7 @@ export default function About(){
                 <p>Desenvolvedor independente de sites para alavancar o seu negócio!</p>
                 <p>Com a crescente popularização da internet, é cada vez mais importante possuir um site para aumentar as visitas!</p>
                 <p>Certificado em Front-End pela empresa Danki Code, produzo seu site com eficiência, baixo custo e com as melhores práticas de segurança e qualidade!</p>
+                <Link to='Specialties' activeClass="active" spy={true} smooth={true} offset={-30} duration={500}>Minhas especialidades</Link>
             </Element>
         </section>
     )

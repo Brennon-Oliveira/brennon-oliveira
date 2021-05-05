@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    margin-top: 1rem;
 }
 
 #footer ul a {
@@ -36,4 +37,14 @@
 
 #footer ul li:last-of-type a:hover {
     color: var(--facebook);
+}
+
+@media screen and (max-width: 720px) {
+    #footer :global(.container) {
+        flex-direction: column;
+    }
+
+    #footer ul {
+        margin-top: 1rem;
+    }
 }

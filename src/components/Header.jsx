@@ -26,6 +26,9 @@ export default function Header(){
                             </li>
                         </ul>
                     <SlideToggle
+                    collapsed
+                    duration={400}
+                    noDisplayStyle
                     render={({ toggle, setCollapsibleElement }) => (
                         <div className={style.mobile}>
                         <i class="fas fa-bars" id="menuMobile" aria-hidden="true" onClick={toggle}></i>

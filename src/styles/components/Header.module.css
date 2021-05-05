@@ -59,7 +59,6 @@
         position: absolute;
         top: 61px;
         left: 0;
-        display: block;
         width: 100%;
         background-color: var(--dark-gray);
         z-index: 99;
