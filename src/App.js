@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import style from './App.css';
+import './App.css';
 
 function App() {
 

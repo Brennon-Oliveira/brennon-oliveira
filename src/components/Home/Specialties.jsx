@@ -12,7 +12,7 @@ import { Element } from 'react-scroll';
 
 export default function Specialties(){
 
-    const [specialties, setSpecialties] = useState([
+    const [specialties] = useState([
         {title:'HTML5',icon:'fab fa-html5', image:htmlBanner,text:'Sites desenvolvidos em HTML5 com boas praticas e compatíveis com todos os navegadores!'},
         {title:'CSS3',icon:'fab fa-css3-alt', image:cssBanner,text:'Sites estilizados e com um design ótimo para tudo que precisar com o CSS3!'},
         {title:'JavaScript',icon:'fab fa-js', image:jsBanner,text:'Site dinâmico com interatividade e ótima experiência para o usuário usando o JavaScript!'},

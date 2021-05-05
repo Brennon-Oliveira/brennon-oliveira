@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './../styles/components/Specialty.module.css';
-import htmlBanner from './../images/specialties/htmlBanner.jpg'
 
 export default function Specialty(props){
     return(

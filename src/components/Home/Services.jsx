@@ -5,7 +5,7 @@ import { Element } from 'react-scroll';
 
 export default function Services(){
 
-    const [services, setServices] = useState([
+    const [services] = useState([
         'Landing Pages para anunciar o seu negócio',
         'Site de vendas para o seu negócio',
         'Páginas promocionais para divulgar seu trabalho',
@@ -22,7 +22,7 @@ export default function Services(){
                 <div className={style.servicesContainer}>
                     {
                         services.map((val, i)=>{
-                            if(i == services.length-1){
+                            if(i === services.length-1){
                                 return <Service text={val} id={i+1} last={true}/>
                             } else {
                                 return <Service text={val} id={i+1} last={false}/>;
