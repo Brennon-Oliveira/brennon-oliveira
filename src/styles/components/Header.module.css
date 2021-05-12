@@ -3,10 +3,6 @@
     padding: 1rem 0;
 }
 
-.mobile{
-    display:none;
-}
-
 #header :global(.container) {
     display: flex;
     justify-content:space-between;
@@ -22,61 +18,104 @@
     text-decoration: underline;
 }
 
-#header ul.desktop {
+.menu ul {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
-#header ul a {
+.menu ul a {
     color: var(--white);
     font-size: 1.25rem;
     transition: font-size .3s;
 }
 
-#header ul.desktop a:hover {
+.menu ul a:hover {
     text-decoration: underline;
     font-size: 1.5rem;
 }
 
-#header i {
+.menu i {
     display: none;
     font-size: 2rem;
     color:var(--white);
     cursor: pointer;
 }
 
+.menuButton {
+    display: none;
+}
+
 @media screen and (max-width:720px) {
 
-    #header ul.desktop {
-        display: none;
-    }
-
-    .mobile {
+    .menuButton {
         display: block;
+        background-color: transparent;
+        border: none;
+        border-top: 3px solid;
+        width:30px;
+        color: var(--white);
+        cursor: pointer;
     }
 
-    .mobile ul {
-        position: absolute;
-        top: 61px;
-        left: 0;
-        width: 100%;
+    .menuButton::before, .menuButton::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: currentColor;
+        margin-top:6px;
+        position: relative;
+        transition: .6s;
+    }
+
+    .menu ul {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 0;
         background-color: var(--dark-gray);
-        z-index: 99;
+        height: 0px;
+        z-index: 900;
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        width:100%;
+        top: 60px;
+        left: 0;
+        overflow-y: hidden;
+        transition: .8s;
     }
 
-    .mobile ul a {
-        display:inline-block;
+    .menu:global(.active) ul {
+        visibility: visible;
+        height: 200px;
+    }
+
+    .menu:global(.active) ul {
+        display: grid;
+    }
+
+    .menu ul a {
+        display: block;
+        padding:1rem 0;
         text-align: center;
-        width: 100%;
-        padding: 1.25rem 0;
-        border-bottom: 1px solid var(--black);
+        font-size: 1.25rem !important;
     }
 
-    .mobile ul a:hover {
-        text-decoration: underline;
+    .menu ul a:hover {
+        background-color: var(--plus-dark-gray);
     }
 
-    #header .mobile i {
-        display:block;
+    .menu:global(.active) .menuButton{
+        border-top-color: transparent;
+    }
+
+    .menu:global(.active) .menuButton::after {
+        transform: rotate(135deg);
+        top: -9px;
+    }
+
+    .menu:global(.active) .menuButton::before {
+        transform: rotate(-135deg);
     }
 }
