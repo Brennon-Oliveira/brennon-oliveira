@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 720px) {
+    #footer {
+        padding-bottom: 4.5rem;
+    }
+
     #footer :global(.container) {
         flex-direction: column;
     }
