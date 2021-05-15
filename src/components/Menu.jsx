@@ -11,15 +11,9 @@ export default function Menu(){
         menu.classList.toggle('active');
         btn.classList.toggle('active');
     }
-    
-    useEffect(()=>{
-        var btn = document.querySelector('.'+style.btn)
-        btn.addEventListener('touchstart',(e)=>{toggleMenu(e)})
-        btn.addEventListener('click',(e)=>{toggleMenu(e)})
-    },[])
 
     return(
-        <div>
+        <div onClick={(e)=>{toggleMenu(e)}}>
             <nav className={style.menu}>
                 <ul>
                     <li><Link to=''>Home</Link></li>
