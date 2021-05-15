@@ -13,12 +13,19 @@
     visibility: hidden;
     background-color: var(--dark-gray);
     height: 0;
-    width: 100%;
+    width: 0;
     transition: .5s;
+    position: relative;
+    left: 50%;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    overflow: hidden;
 }
 
 .menu:global(.active) ul{
+    left: 0;
     visibility: visible;
+    width: 100%;
     height: 65vh;
     display:grid;
     grid-template-columns: 1fr;
