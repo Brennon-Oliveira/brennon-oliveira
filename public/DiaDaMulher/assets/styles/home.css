@@ -1,0 +1,253 @@
+/*HEADER*/
+
+header#header {
+    background: var(--header);
+    padding: 1rem 0;
+}
+
+#header h1 a {
+    font-size: 2rem;
+    color: var(--white);
+    transition: color .5s;
+}
+
+#header .desktop ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.75rem;
+}
+
+#header .desktop ul li a {
+    font-size: 1.5rem;
+    color: var(--white);
+    transition: color .5s;
+}
+
+#header h1 a:hover,
+#header .desktop ul li a:hover {
+    color: var(--black) !important;
+}
+
+#header .mobile {
+    display: none;
+}
+
+#header .mobile i {
+    color: var(--white);
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+#header .mobile ul {
+    display: none;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    background-color: var(--contato);
+    z-index: 2;
+}
+
+#header .mobile ul li a {
+    background-color: var(--contato);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--black);
+    font-size: 1.5rem;
+}
+
+#header .mobile ul li a:hover {
+    filter: brightness(85%);
+}
+
+
+/*BANNER*/
+
+section#banner {
+    background-image: url('../images/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#banner .overlay {
+    background: rgba(51, 4, 54, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#banner .container {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    height: 100%;
+    color: var(--gray);
+    font-size: 1.75rem;
+}
+
+
+/*ABOUT*/
+
+#about {
+    background-color: var(--white);
+}
+
+#about .container div {
+    padding: 0 1.5rem;
+}
+
+#about .about-icon {
+    width: 100%;
+}
+
+#about .about-icon img {
+    max-width: 100%;
+}
+
+#about .about-text {
+    color: var(--black);
+}
+
+#about .about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+
+/*CONTACT*/
+
+#contact {
+    background-color: var(--contato);
+}
+
+#contact .container div {
+    padding: 0 1.5rem;
+}
+
+#contact .contact-icon {
+    width: 100%;
+}
+
+#contact .contact-icon img {
+    max-width: 100%;
+}
+
+#contact .contact-content {
+    text-align: center;
+    color: var(--white);
+}
+
+#contact .contact-content form {
+    width: 100%;
+}
+
+#contact .contact-content input:not([type=submit]) {
+    width: 100%;
+    border: none;
+    height: 42px;
+    margin-top: 1rem;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Fira Sans';
+}
+
+#contact .contact-content textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 120px;
+    min-height: 90px;
+    max-height: 150px;
+    resize: vertical;
+    margin-top: 1rem;
+    padding: 9px;
+    font-family: 'Fira Sans';
+}
+
+#contact .contact-content input::placeholder,
+#contact .contact-content textarea::placeholder {
+    color: var(--black);
+    opacity: .5;
+}
+
+#contact .contact-content input[type=submit] {
+    width: 300px;
+    height: 42px;
+    background-color: var(--blue);
+    border: none;
+    margin-top: 1.10rem;
+    color: var(--white);
+    font-family: "Fira Sans";
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#contact .contact-content input[type=submit]:hover {
+    filter: brightness(85%);
+}
+
+
+/*QUOTE*/
+
+section#quote {
+    background: #3F1142;
+}
+
+section#quote .container {
+    justify-content: center;
+    color: var(--gray);
+    font-size: 1.10rem;
+}
+
+
+/*FOOTER*/
+
+footer#footer {
+    background: #1D011F;
+    padding: 30px 0;
+}
+
+#footer .container p,
+#footer .container a {
+    color: var(--white);
+    font-size: 1.10rem;
+}
+
+#footer .container a:hover {
+    text-decoration: underline;
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 850px) {
+    .w50 {
+        width: 100%!important;
+    }
+    #contact .container {
+        flex-direction: column-reverse;
+    }
+    #contact .container {
+        flex-direction: column-reverse;
+    }
+    #contact .contact-icon {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #header .desktop {
+        display: none;
+    }
+    #header .mobile {
+        display: initial;
+    }
+}
