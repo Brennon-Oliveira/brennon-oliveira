@@ -27,30 +27,28 @@ export default function Header(){
         <header id={style.header}>
             <div name="Home" className="container">
                 <h1>
-                    <ScrollLink element='Home' duration='500' page='home' >Brennon Oliveira</ScrollLink>
+                    <ScrollLink>Brennon Oliveira</ScrollLink>
                 </h1>
                 <nav className={style.menu}>
                     <ul id='menu' role='menu'>
                         <li>
-                            <ScrollLink element='Home' duration='500' page='home' >Home</ScrollLink>
+                            <ScrollLink />
                         </li>
                         <li>
-                            <ScrollLink element='About' duration='600' page='home' >Sobre</ScrollLink>
+                            <ScrollLink element='About'>Sobre</ScrollLink>
                         </li>
                         <li>
-                            <ScrollLink element='Services' duration='700' page='home' >Serviços</ScrollLink>
+                            <ScrollLink element='Services'>Serviços</ScrollLink>
                         </li>
                         <li>
-                            <ScrollLink element='Contact' duration='800' page='home' >Contato</ScrollLink>
+                            <ScrollLink element='Contact' duration='800'>Contato</ScrollLink>
                         </li>
-                        
                     </ul>
                     <button aria-label={ariaLabel} aria-haspopup="true" aria-controls='menu' aria-expanded={ariaExpanded} id='btnMenu' class={style.menuButton}>
                         <span></span>
                     </button>
                 </nav>
             </div>
-            
         </header>
     )
 }

@@ -1,11 +1,12 @@
 import React from 'react';
+import ResumeInfo from '../components/Resume/ResumeInfo';
 
 export default function Resume(){
 
 
     return(
-        <h1 style={{height:700}}>
-            Resume
-        </h1>
+        <>
+            <ResumeInfo />
+        </>
     )
 }
