@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, Element} from 'react-scroll';
 import style from './../styles/components/Header.module.css';
+import ScrollLink from './ScrollLink';
 
 export default function Header(){
 
@@ -26,21 +27,21 @@ export default function Header(){
         <header id={style.header}>
             <div name="Home" className="container">
                 <h1>
-                    <Link activeClass="active" to="Home" spy={true} smooth={true} offset={-30} duration={500}>Brennon Oliveira</Link>
+                    <ScrollLink>Brennon Oliveira</ScrollLink>
                 </h1>
                 <nav className={style.menu}>
                     <ul id='menu' role='menu'>
                         <li>
-                            <Link activeClass="active" to="Home" spy={true} smooth={true} offset={-30} duration={500} >Home</Link>
+                            <ScrollLink />
                         </li>
                         <li>
-                            <Link activeClass="active" to="About" spy={true} smooth={true} offset={-30} duration={500}>Sobre</Link>
+                            <ScrollLink element='About'>Sobre</ScrollLink>
                         </li>
                         <li>
-                            <Link activeClass="active" to="Services" spy={true} smooth={true} offset={-30} duration={500}>Serviços</Link>
+                            <ScrollLink element='Services'>Serviços</ScrollLink>
                         </li>
                         <li>
-                            <Link activeClass="active" to="Contact" spy={true} smooth={true} offset={-30} duration={500}>Contato</Link>
+                            <ScrollLink element='Contact' duration='800'>Contato</ScrollLink>
                         </li>
                     </ul>
                     <button aria-label={ariaLabel} aria-haspopup="true" aria-controls='menu' aria-expanded={ariaExpanded} id='btnMenu' class={style.menuButton}>
@@ -48,7 +49,6 @@ export default function Header(){
                     </button>
                 </nav>
             </div>
-            
         </header>
     )
 }

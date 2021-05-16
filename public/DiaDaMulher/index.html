@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="Dedicado ao um dia tão especial - Feliz dia das mulheres">
+    <!--Links-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/colors.css">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/893c7682a5.js" crossorigin="anonymous"></script>
+    <script src="assets/scripts/mobileMenu.js"></script>
+    <script src="assets/scripts/getDate.js"></script>
+    <!--Title-->
+    <title>Dia da Mulheres</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <h1><a href="" title="Titulo">Dia da Mulheres</a></h1>
+            <nav class="desktop" aria-labelledby="desktopmenu">
+                <ul>
+                    <li><a href="#" id="home" aria-current="home">Home</a></li>
+                    <li><a href="#" id="sobre" aria-current="sobre">Sobre</a></li>
+                    <li><a href="#" id="contato" aria-current="contato">Contato</a></li>
+                </ul>
+            </nav>
+            <!--desktop-->
+            <nav class="mobile" aria-labelledby="mobilemenu">
+                <i id="btnMenu" class="fas fa-bars"></i>
+                <ul>
+                    <li><a href="#" id="home" aria-current="home">Home</a></li>
+                    <li><a href="#" id="sobre" aria-current="sobre">Sobre</a></li>
+                    <li><a href="#" id="contato" aria-current="contato">Contato</a></li>
+                </ul>
+            </nav>
+            <!--mobile-->
+        </div>
+        <!--container-->
+    </header>
+    <!--header-->
+
+    <section id="banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Para todas as mulheres do mundo</h2>
+        </div>
+        <!--container-->
+    </section>
+    <!--banner-->
+
+    <section id="about">
+        <div class="container">
+            <div class="about-text w50">
+                <h2 class="title">Sobre</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget
+                    nulla facilisi etiam dignissim diam quis</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget
+                    nulla
+                </p>
+            </div>
+            <!--about-text-->
+            <div class="about-icon w50">
+                <img src="assets/images/sobre.svg" alt="sobre">
+            </div>
+            <!--about-icon-->
+        </div>
+        <!--container-->
+    </section>
+    <!--about-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-icon w50">
+                <img src="assets/images/contato.svg" alt="sobre">
+            </div>
+            <!--contact-icon-->
+            <div class="contact-content w50">
+                <h2 class="title">Sobre</h2>
+                <form method="post">
+                    <label for="name">
+                        <input id="name" type="text" name="name" placeholder="Nome...">
+                    </label>
+                    <label for="email">
+                        <input id="email" aria-label="email" type="email" name="email" placeholder="Email...">
+                    </label>
+                    <label for="number">
+                        <input id="number" aria-label="numero" type="text" name="number" placeholder="Telefone...">
+                    </label>
+                    <label for="message">
+                        <textarea id="message" aria-label="mensagem" name="message" placeholder="Sua mensagem..."></textarea>
+                    </label>
+                    <label for="action">
+                        <input id="action" aria-label="enviar" type="submit" name="action" value="Enviar">
+                    </label>
+                </form>
+            </div>
+            <!--contact-icon-->
+        </div>
+        <!--container-->
+    </section>
+    <!--contact-->
+
+    <section id="quote">
+        <div class="container">
+            <p>"Toda mulher tem no seu íntimo uma magia própria de fazer acontecer, de dar um jeito, de dar o peito, dar um colo, de fazer bem feito."</p>
+        </div>
+        <!--container-->
+    </section>
+    <!--quote-->
+
+    <footer id="footer">
+        <div class="container">
+            <p>©️ 1911 - <span id="curYear"></span> Dia da Mulher</p>
+            <a href="#" title="desenvolvedor">Desenvolvedor: Brennon Oliveira</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
