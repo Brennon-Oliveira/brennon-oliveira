@@ -1,9 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    list-style-type: none;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 a {
@@ -17,7 +20,7 @@ a {
     padding: 0 2%;
 }
 
-h1, h2, a {
+h1, h2, h3, a {
     font-family: 'Fira Sans';
     font-weight: 300;
 }
@@ -30,7 +33,7 @@ section h2 {
     margin-bottom: 2rem;
 }
 
-p, span, button {
+p, span, button, li {
     font-family: 'Open Sans';
 }
 
