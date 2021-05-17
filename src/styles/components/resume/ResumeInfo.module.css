@@ -86,3 +86,9 @@ header.profile p {
 .button a:hover {
     background-color: #af5b00;
 }
+
+@media screen and (max-width:600px){
+    header.profile {
+        flex-direction: column-reverse;
+    }
+}
