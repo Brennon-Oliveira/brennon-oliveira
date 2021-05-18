@@ -11,7 +11,7 @@ export default function ResumeInfo() {
     const [images, setImages] = useState(null);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/resume').
+        fetch('https://brennonaleatorioapi.herokuapp.com/resume').
         then(res => res.json())
         .then(
             (result) => {
@@ -97,7 +97,7 @@ export default function ResumeInfo() {
                         </div>
 
                         <div className={style.button}>
-                            <a href='http://localhost:5000/resume/pdf' download="Currículo.pdf">Baixar em PDF</a>
+                            <a href='https://brennonaleatorioapi.herokuapp.com/resume/pdf' download="Currículo.pdf">Baixar em PDF</a>
                         </div>
 
                     </div>
