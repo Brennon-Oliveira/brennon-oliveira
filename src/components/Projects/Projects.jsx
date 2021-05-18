@@ -25,7 +25,7 @@ export default function MyProjects(){
         return (
             <div className={style.loading}>
                 <div>
-                    <img src={loading} alt="Loadig" />
+                    <img src={loading} alt="Loading" />
                     <p>Carregando: Pode demorar!</p>
                 </div>
             </div>
