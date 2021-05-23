@@ -40,7 +40,7 @@ export default function MyProjects(){
                     {
                         projects.map((val, i)=>{
                             return <div className={style.wrapper}>
-                                <img src={'https://brennonaleatorioapi.herokuapp.com/images/'+val.image} alt="" />
+                                <img src={'https://images.brennonaleatorio.com.br/'+val.image} alt="" />
                                 
                                 <div className={style.body}>
                                     <h3>{val.title}</h3>
