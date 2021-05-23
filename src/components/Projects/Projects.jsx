@@ -9,7 +9,7 @@ export default function MyProjects(){
     const [images, setImages] = useState(null);
 
     useEffect(()=>{
-        fetch('https://brennonaleatorioapi.herokuapp.com/projects').
+        fetch('http://localhost:5000/projects').
         then(res => res.json())
         .then(
             (result) => {
@@ -40,7 +40,7 @@ export default function MyProjects(){
                     {
                         projects.map((val, i)=>{
                             return <div className={style.wrapper}>
-                                <img src={'https://brennonaleatorioapi.herokuapp.com/images/'+val.image} alt="" />
+                                <img src={'http://images.brennonaleatorio.com.br/'+val.image} alt="" />
                                 
                                 <div className={style.body}>
                                     <h3>{val.title}</h3>
