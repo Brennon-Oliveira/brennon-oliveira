@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
+    z-index: 99;
 
     h1 {
         a {
@@ -24,6 +26,8 @@
     }
 
     button {
+        position: relative;
+        z-index: 99;
         height: 35px;
         border: none;
         background: transparent;
@@ -55,6 +59,110 @@
 
         span::after {
             top: 0.4rem;
+        }
+
+        &:global(.active) span {
+            background-color: transparent;
+        }
+
+        &:global(.active) span::before {
+            transform: rotate(135deg);
+            top: -1px;
+        }
+
+        &:global(.active) span::after {
+            transform: rotate(-135deg);
+            top: -5px;
+        }
+    }
+}
+
+.menu {
+    width: 30%;
+    height: 150vh;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--black);
+    right: 0;
+    top: 0;
+    padding: 0 2%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: width 0.5s, padding 0.3s;
+
+    &:global(.active) {
+        width: 0;
+        padding: 0;
+    }
+
+    h2 {
+        height: 70px;
+        line-height: 70px;
+        font-size: var(--fs-large);
+        color: var(--white);
+        font-weight: 400;
+        font-family: "Roboto";
+    }
+
+    .options {
+        ul {
+            flex-direction: column;
+            display: flex;
+            gap: 1.5rem;
+
+            li a {
+                font-size: var(--fs-text);
+                font-family: "Telex";
+                color: var(--white);
+                display: inline-block;
+
+                div {
+                    width: 30px;
+                    height: 2px;
+                    margin-top: 0.25rem;
+                    background-color: var(--white);
+                    transition: width 0.3s;
+                }
+
+                &:hover {
+                    div {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        color: var(--white-gray);
+        font-family: "Martel Sans";
+        font-size: 0.75rem;
+
+        a {
+            color: var(--gray);
+            text-decoration: underline;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+
+    .menuSocial ul {
+        display: flex;
+        gap: 1rem;
+
+        li a {
+            font-size: 1.25rem;
+            color: var(--gray);
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--white);
+            }
         }
     }
 }
