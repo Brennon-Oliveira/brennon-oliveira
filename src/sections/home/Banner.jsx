@@ -30,50 +30,50 @@ export default function Banner(props) {
                             <Link>Ferramentas</Link>
                         </div>
                     </div>
-                    <div className={style.social}>
+                    <nav className={style.social}>
                         <ul>
                             <li>
                                 <a href="">
-                                    <span>Whatsapp</span>
                                     <span>
                                         <i class="fab fa-whatsapp"></i>
                                     </span>
+                                    <span>Whatsapp</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <span>Facebook</span>
                                     <span>
                                         <i class="fab fa-facebook-f"></i>
                                     </span>
+                                    <span>Facebook</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <span>Linkedin</span>
                                     <span>
                                         <i class="fab fa-linkedin-in"></i>
                                     </span>
+                                    <span>Linkedin</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <span>Instagram</span>
                                     <span>
                                         <i class="fab fa-instagram"></i>
                                     </span>
+                                    <span>Instagram</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <span>Github</span>
                                     <span>
                                         <i class="fab fa-github"></i>
                                     </span>
+                                    <span>Github</span>
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </Container>
         </section>
