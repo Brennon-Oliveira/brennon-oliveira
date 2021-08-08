@@ -1,0 +1,60 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+
+    h1 {
+        a {
+            color: var(--white);
+            font-size: var(--fs-large);
+            font-weight: 400;
+
+            div {
+                width: 50px;
+                height: 2px;
+                background-color: var(--white);
+                transition: width 0.5s;
+            }
+
+            &:hover div {
+                width: 100%;
+            }
+        }
+    }
+
+    button {
+        height: 35px;
+        border: none;
+        background: transparent;
+        display: block;
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            height: 4px;
+            width: 2.5rem;
+            color: var(--white);
+            background-color: var(--white);
+        }
+
+        span::before,
+        span::after {
+            content: "";
+            background-color: currentColor;
+            width: 2.5rem;
+            height: 4px;
+            display: block;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        span::before {
+            top: -0.58rem;
+        }
+
+        span::after {
+            top: 0.4rem;
+        }
+    }
+}
