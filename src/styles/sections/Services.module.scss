@@ -1,0 +1,43 @@
+#services {
+    > div {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        align-items: center;
+
+        .content {
+            width: 50%;
+
+            .title {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                h3.bgText {
+                    position: absolute;
+                    font-size: 10rem;
+                    color: var(--bg-text);
+                    top: 0;
+                    left: 0;
+                }
+
+                h2 {
+                    position: relative;
+                    top: -3rem;
+                    z-index: 3;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+
+        .image {
+            width: 50%;
+        }
+    }
+}

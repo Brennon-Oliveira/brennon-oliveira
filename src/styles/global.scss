@@ -9,8 +9,16 @@
     text-decoration: none;
 }
 
+body {
+    background: var(--black-gray);
+}
+
 body.menu {
     overflow-y: hidden;
+}
+
+section {
+    padding: 60px 0;
 }
 
 h1,

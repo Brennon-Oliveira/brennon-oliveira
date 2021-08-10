@@ -7,6 +7,8 @@
     z-index: 99;
 
     h1 {
+        position: relative;
+        z-index: 1s;
         a {
             color: var(--white);
             font-size: var(--fs-large);
@@ -78,7 +80,7 @@
 }
 
 .menu {
-    width: 30%;
+    width: 400px;
     height: 150vh;
     position: absolute;
     z-index: 3;
