@@ -1,0 +1,33 @@
+#footer {
+    > div {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .social ul {
+            display: flex;
+            gap: 2rem;
+
+            li {
+                width: 64px;
+                height: 64px;
+                position: relative;
+
+                a {
+                    border: 2px solid var(--white);
+                    display: inline-block;
+                    width: 64px;
+                    height: 64px;
+                    color: var(--white);
+                    font-size: 2rem;
+                    text-align: center;
+                    line-height: 64px;
+                    transition: font-size 0.3s;
+                    &:hover {
+                        font-size: 2.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

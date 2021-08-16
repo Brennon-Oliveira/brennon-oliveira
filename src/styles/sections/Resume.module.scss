@@ -17,10 +17,14 @@
             gap: 1rem;
             justify-content: center;
 
-            button {
-                display: inline-block;
+            form {
                 width: 100%;
                 max-width: 300px;
+                button {
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 300px;
+                }
             }
         }
 
@@ -28,11 +32,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
 
             .image {
                 width: 250px;
                 height: 250px;
                 background-color: gray;
+            }
+
+            @media screen and (max-width: 680px) {
+                flex-direction: column-reverse;
             }
         }
     }

@@ -5,6 +5,8 @@ import Products from "../sections/home/Products";
 import Specialties from "../sections/home/Specialties";
 import Resume from "../sections/home/Resume";
 import Projects from "../sections/home/Projects";
+import Contact from '../sections/home/Contact';
+import Footer from '../sections/home/Footer';
 
 export default function Home() {
     return (
@@ -16,6 +18,8 @@ export default function Home() {
             <Specialties />
             <Resume />
             <Projects />
+            <Contact />
+            <Footer />
         </>
     );
 }
