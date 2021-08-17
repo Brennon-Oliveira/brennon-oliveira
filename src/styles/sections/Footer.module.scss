@@ -2,11 +2,11 @@
     > div {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 3rem;
 
         .social ul {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
 
             li {
                 width: 64px;
@@ -14,17 +14,33 @@
                 position: relative;
 
                 a {
-                    border: 2px solid var(--white);
+                    position: relative;
                     display: inline-block;
+                    text-align: center;
+                    padding-left: 4px;
+                    line-height: 68px;
+                    // justify-content: center;
+                    // align-items: center;
                     width: 64px;
                     height: 64px;
                     color: var(--white);
                     font-size: 2rem;
-                    text-align: center;
-                    line-height: 64px;
                     transition: font-size 0.3s;
-                    &:hover {
-                        font-size: 2.25rem;
+
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 2px solid var(--white);
+                        content: "";
+                        -webkit-transition: all, 0.5s;
+                        -o-transition: all, 0.5s;
+                        transition: all, 0.5s;
+                    }
+                    &:hover::after {
+                        transform: rotate(45deg);
                     }
                 }
             }

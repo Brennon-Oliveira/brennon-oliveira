@@ -11,6 +11,7 @@ export default function Footer() {
                         <li>
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="https://api.whatsapp.com/send?phone=5542999017838&amp;text=Ola%2C%20podemos%20conversar%20sobre%20o%20meu%20site%3F"
                             >
                                 <i class="fab fa-whatsapp"></i>
@@ -19,6 +20,7 @@ export default function Footer() {
                         <li>
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="https://www.facebook.com/profile.php?id=100006669199502"
                             >
                                 <i class="fab fa-facebook-f"></i>
@@ -27,6 +29,7 @@ export default function Footer() {
                         <li>
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="https://www.linkedin.com/in/brennon-oliveira-96a5621bb/"
                             >
                                 <i class="fab fa-linkedin-in"></i>
@@ -35,6 +38,7 @@ export default function Footer() {
                         <li>
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="https://www.instagram.com/brenn0n_oliveira/"
                             >
                                 <i class="fab fa-instagram"></i>
@@ -43,6 +47,7 @@ export default function Footer() {
                         <li>
                             <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href="https://github.com/Brennon-Oliveira"
                             >
                                 <i class="fab fa-github"></i>
