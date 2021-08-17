@@ -1,9 +1,13 @@
+import { Element } from "react-scroll";
 import style from "./../styles/components/Container.module.scss";
 
-export default function Container({ min, children }) {
+export default function Container({ min, children, name }) {
     return (
-        <div className={min ? style.containerMin : style.container}>
+        <Element
+            name={name ? name : "name" + Math.random()}
+            className={min ? style.containerMin : style.container}
+        >
             {children}
-        </div>
+        </Element>
     );
 }

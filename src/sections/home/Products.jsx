@@ -58,7 +58,7 @@ export default function Products() {
 
     return (
         <section id={style.products}>
-            <Container min>
+            <Container name="Products" min>
                 <Title>Produtos</Title>
                 <div className={style.productsContainer}>
                     {products.map((val, i) => {

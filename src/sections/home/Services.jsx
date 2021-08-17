@@ -4,7 +4,7 @@ import Title from "../../components/Title";
 import Text from "../../components/Text";
 import style from "../../styles/sections/Services.module.scss";
 import ServicesSvg from "../../assets/images/Services.svg";
-import Link from "../../components/Link";
+import A from "../../components/A";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -45,8 +45,8 @@ export default function Services() {
                         </Text>
                     </div>
                     <div className={style.buttons}>
-                        <Link>Ferramentas</Link>
-                        <Link>Doar</Link>
+                        <A to="Home">Ferramentas</A>
+                        <A to="Home">Doar</A>
                     </div>
                 </div>
                 <div className={style.image}>

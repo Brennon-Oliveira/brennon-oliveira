@@ -66,7 +66,7 @@ export default function Specialties() {
 
     return (
         <section id={style.specialties}>
-            <Container>
+            <Container name="Specialties">
                 <Title>Especialidades</Title>
                 <div className={style.specialties}>
                     {specialties.map((val) => {

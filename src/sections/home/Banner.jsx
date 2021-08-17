@@ -1,9 +1,11 @@
 import Container from "../../components/Container";
 import style from "../../styles/sections/Banner.module.scss";
-import Link from "../../components/Link";
+import A from "../../components/A";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Element } from "react-scroll";
+import Header from "./Header";
 
 export default function Banner(props) {
     function toggleMenu(e) {
@@ -29,101 +31,7 @@ export default function Banner(props) {
 
     return (
         <section id={style.banner}>
-            <div className={`${style.menu} active`}>
-                <h2>Menu</h2>
-                <nav className={style.options}>
-                    <ul>
-                        <li>
-                            <a href="">
-                                Ferramentas
-                                <div></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Produtos
-                                <div></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Especialidades
-                                <div></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Currículo
-                                <div></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Projetos
-                                <div></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Contato<div></div>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p>
-                    Caso precise de alguma informação, por favor entre em{" "}
-                    <a href="">contato</a> na sessão de contato!
-                </p>
-                <nav className={style.menuSocial}>
-                    <ul>
-                        <li>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://api.whatsapp.com/send?phone=5542999017838&amp;text=Ola%2C%20podemos%20conversar%20sobre%20o%20meu%20site%3F"
-                            >
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.facebook.com/profile.php?id=100006669199502"
-                            >
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.linkedin.com/in/brennon-oliveira-96a5621bb/"
-                            >
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.instagram.com/brenn0n_oliveira/"
-                            >
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://github.com/Brennon-Oliveira"
-                            >
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <Header toggleMenu={toggleMenu} style={style} />
             <div className={style.overlay}></div>
             <Container>
                 <header id={style.header}>
@@ -145,8 +53,8 @@ export default function Banner(props) {
                         </h2>
                         <p>WELCOME TO GLINT</p>
                         <div className={style.buttons}>
-                            <Link>Contato</Link>
-                            <Link>Ferramentas</Link>
+                            <A to="Contact">Contato</A>
+                            <A>Ferramentas</A>
                         </div>
                     </div>
                     <nav className={style.social}>

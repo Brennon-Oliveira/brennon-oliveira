@@ -2,7 +2,7 @@ import style from "../../styles/sections/Resume.module.scss";
 import Title from "../../components/Title";
 import Container from "../../components/Container";
 import Text from "../../components/Text";
-import Link from "../../components/Link";
+import A from "../../components/A";
 import { useState } from "react";
 
 export default function Resume() {
@@ -44,7 +44,7 @@ export default function Resume() {
 
     return (
         <section id={style.resume}>
-            <Container min>
+            <Container name="Resume" min>
                 <div className={style.header}>
                     <div className={style.infos}>
                         <Title>{resumeInfo.name}</Title>
@@ -113,8 +113,8 @@ export default function Resume() {
                     </ul>
                 </div>
                 <div className={style.buttons}>
-                    <Link downloadPDF>Baixar em PDF</Link>
-                    <Link downloadPDF>Certificados</Link>
+                    <A downloadPDF>Baixar em PDF</A>
+                    <A downloadPDF>Certificados</A>
                 </div>
             </Container>
         </section>

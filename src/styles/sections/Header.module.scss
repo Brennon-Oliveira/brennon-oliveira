@@ -123,6 +123,8 @@
                 font-family: "Telex";
                 color: var(--white);
                 display: inline-block;
+                cursor: pointer;
+                user-select: none;
 
                 div {
                     width: 30px;
@@ -150,6 +152,8 @@
             color: var(--gray);
             text-decoration: underline;
             transition: color 0.3s;
+            cursor: pointer;
+            user-select: none;
 
             &:hover {
                 color: var(--white);

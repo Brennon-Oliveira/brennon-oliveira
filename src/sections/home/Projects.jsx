@@ -58,7 +58,7 @@ export default function Projects() {
 
     return (
         <section id={style.projects}>
-            <Container>
+            <Container name="Projects">
                 <Title>Projetos</Title>
                 <div className={style.projectsContainer}>
                     {projects.map((val) => {

@@ -166,7 +166,7 @@ export default function Contact() {
 
     return (
         <section id={style.contact}>
-            <Container>
+            <Container name="Contact">
                 <Title>{nameForm}</Title>
                 <form onSubmit={(e) => submit(e)}>
                     <div className={style.wrapper}>
