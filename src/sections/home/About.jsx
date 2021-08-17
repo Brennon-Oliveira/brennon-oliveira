@@ -4,6 +4,8 @@ import Title from "../../components/Title";
 import Text from "../../components/Text";
 import style from "../../styles/sections/About.module.scss";
 import AboutSvg from "../../assets/images/About.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
     const [heightTitle, setHeightTitle] = useState();
@@ -13,12 +15,13 @@ export default function About() {
         let bgText = document.querySelector(`.${style.bgText}`);
         setHeightTitle(bgText.offsetHeight);
         setWidthTitle(bgText.offsetWidth);
+        Aos.init({ duration: 3000 });
     }, []);
 
     return (
         <section id={style.about}>
             <Container>
-                <div className={style.content}>
+                <div className={style.content} data-aos="fade-right">
                     <div
                         style={{ height: heightTitle, width: widthTitle }}
                         className={style.title}

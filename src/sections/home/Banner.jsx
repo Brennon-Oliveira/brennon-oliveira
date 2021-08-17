@@ -2,6 +2,8 @@ import Container from "../../components/Container";
 import style from "../../styles/sections/Banner.module.scss";
 import Link from "../../components/Link";
 import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Banner(props) {
     function toggleMenu(e) {
@@ -22,6 +24,7 @@ export default function Banner(props) {
         btn.addEventListener("click", (e) => {
             toggleMenu(e);
         });
+        Aos.init({ duration: 2000 });
     }, []);
 
     return (
@@ -135,7 +138,7 @@ export default function Banner(props) {
                     </button>
                 </header>
                 <div className={style.content}>
-                    <div className={style.infos}>
+                    <div className={style.infos} data-aos="fade-right">
                         <h2>
                             We are a creative group of people who design
                             influential brands and digital experiences.

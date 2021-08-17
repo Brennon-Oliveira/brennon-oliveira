@@ -3,6 +3,8 @@ import Title from "../../components/Title";
 import Container from "../../components/Container";
 import Text from "../../components/Text";
 import { useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Specialties() {
     const [specialties, setSpecialties] = useState([]);
@@ -59,6 +61,7 @@ export default function Specialties() {
                 content: "Sites estilosos criados a cara da sua marca!",
             },
         ]);
+        Aos.init({ duration: 2000 });
     }, []);
 
     return (
@@ -68,7 +71,7 @@ export default function Specialties() {
                 <div className={style.specialties}>
                     {specialties.map((val) => {
                         return (
-                            <div className={style.wrapper}>
+                            <div data-aos="fade-up" className={style.wrapper}>
                                 <i class={val.icon}></i>
                                 <h3>{val.title}</h3>
                                 <Text>{val.content}</Text>

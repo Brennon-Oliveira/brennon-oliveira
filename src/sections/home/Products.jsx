@@ -4,6 +4,8 @@ import Title from "../../components/Title";
 import Text from "../../components/Text";
 import { useState } from "react";
 import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Products() {
     const [products, setProducts] = useState([]);
@@ -51,6 +53,7 @@ export default function Products() {
                 content: "Robôs e outros processos automatizados",
             },
         ]);
+        Aos.init({ duration: 2000 });
     }, []);
 
     return (
@@ -59,8 +62,12 @@ export default function Products() {
                 <Title>Produtos</Title>
                 <div className={style.productsContainer}>
                     {products.map((val, i) => {
+                        let aosDir = i % 2 !== 0 ? "left" : "right";
                         return (
-                            <div className={style.wrapper}>
+                            <div
+                                data-aos={`fade-${aosDir}`}
+                                className={style.wrapper}
+                            >
                                 <div className={style.header}>
                                     <h4>{i + 1}</h4>
                                     <h3>{val.title}</h3>

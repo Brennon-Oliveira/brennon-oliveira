@@ -5,6 +5,8 @@ import Text from "../../components/Text";
 import style from "../../styles/sections/Services.module.scss";
 import ServicesSvg from "../../assets/images/Services.svg";
 import Link from "../../components/Link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Services() {
     const [heightTitle, setHeightTitle] = useState();
@@ -14,12 +16,13 @@ export default function Services() {
         let bgText = document.querySelector(`.${style.bgText}`);
         setHeightTitle(bgText.offsetHeight);
         setWidthTitle(bgText.offsetWidth);
+        Aos.init({ duration: 3000 });
     }, []);
 
     return (
         <section id={style.services}>
             <Container>
-                <div className={style.content}>
+                <div className={style.content} data-aos="fade-left">
                     <div
                         style={{ height: heightTitle, width: widthTitle }}
                         className={style.title}
