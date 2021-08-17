@@ -1,0 +1,21 @@
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    height: 42px;
+    font-family: "Overlock";
+    font-size: var(--fs-medium);
+    line-height: var(--fs-medium);
+    color: var(--white);
+    background-color: transparent;
+    border: 2px solid var(--white);
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--black);
+    }
+}
