@@ -9,9 +9,14 @@
     text-decoration: none;
 }
 
+html,
+body,
+.App {
+    overflow-x: hidden;
+}
+
 body {
     background: var(--black-gray);
-    overflow-x: hidden;
 }
 
 body.menu {
