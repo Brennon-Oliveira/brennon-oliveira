@@ -7,6 +7,10 @@
         .social ul {
             display: flex;
             gap: 3rem;
+            max-width: 600px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
 
             li {
                 width: 64px;
@@ -44,6 +48,10 @@
                     }
                 }
             }
+
+            // @media screen and (max-width: 600px) {
+            //     flex-direction: column;
+            // }
         }
     }
 }
