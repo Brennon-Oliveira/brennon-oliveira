@@ -79,7 +79,6 @@ export default function Resume() {
                     <Title>Experiência Profissional</Title>
                     <ul>
                         {resumeInfo.professionalExperience.map((val) => {
-                            console.log(val);
                             return (
                                 <li>
                                     <Text>{val.title}</Text>

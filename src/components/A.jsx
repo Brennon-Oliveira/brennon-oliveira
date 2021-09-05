@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import style from "../styles/components/Link.module.scss";
+import { useHistory } from "react-router-dom";
 
 export default function A(props) {
     const [page, setPage] = useState(
@@ -17,7 +18,8 @@ export default function A(props) {
         props.canToggleMenu || false
     );
 
-    const { changeRoute } = useContext(AppContext);
+    const { changeRoute, curRoute } = useContext(AppContext);
+    let history = useHistory();
     function toggleMenu(e) {
         if (e?.type === "touchstart") e.preventDefault();
         let menu = document.querySelector("#menu");
@@ -29,7 +31,13 @@ export default function A(props) {
     }
 
     async function pre() {
-        changeRoute(page);
+        let toPage = page;
+        if (toPage[0] !== "/") {
+            toPage = `/${toPage}`;
+        }
+        console.log(toPage);
+        changeRoute(toPage);
+        history.push(toPage);
         if (canToggleMenu) {
             toggleMenu();
         }
@@ -48,7 +56,7 @@ export default function A(props) {
     return (
         <Link
             class={style.link}
-            to={page}
+            // to={curRoute}
             className={props.className}
             onClick={pre}
         >

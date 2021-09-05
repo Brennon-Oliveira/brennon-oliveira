@@ -7,7 +7,6 @@ export default function AppProvider(props) {
 
     function changeRoute(route) {
         setCurRoute("/" + route);
-        console.log(curRoute);
     }
 
     return (

@@ -36,7 +36,7 @@ export default function Banner(props) {
             <Container>
                 <header id={style.header}>
                     <h1>
-                        <a href="">
+                        <a href="http://localhost:3000">
                             Brennon Oliveira
                             <div></div>
                         </a>
