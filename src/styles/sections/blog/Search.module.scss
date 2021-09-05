@@ -1,0 +1,36 @@
+#search {
+    > div {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .searchBar {
+            width: 100%;
+            max-width: 400px;
+            height: 42px;
+            border: 2px solid var(--white);
+
+            input {
+                background: transparent;
+                border: none;
+                width: calc(100% - 42px);
+                height: 100%;
+                outline: none;
+                color: var(--white);
+                font-size: var(--fs-text);
+                padding: 0 8px;
+            }
+
+            i {
+                cursor: pointer;
+                display: inline-block;
+                width: 42px;
+                height: 100%;
+                color: var(--white);
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
+}

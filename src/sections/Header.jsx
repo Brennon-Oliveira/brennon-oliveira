@@ -28,6 +28,22 @@ export default function Header({ style }) {
                             className="menu"
                             canToggleMenu={true}
                             activeClass="active"
+                            to="Search"
+                            page="blog"
+                            spy={true}
+                            smooth={true}
+                            offset={-30}
+                            duration={500}
+                        >
+                            Blog
+                            <div></div>
+                        </A>
+                    </li>
+                    <li>
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
+                            activeClass="active"
                             to="Products"
                             spy={true}
                             smooth={true}

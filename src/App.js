@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import AppProvider from "./context/AppContext";
 import Banner from "./sections/Banner";
 import Footer from "./sections/Footer";
+import Blog from "./pages/Blog";
 
 function App() {
     return (
@@ -12,6 +13,9 @@ function App() {
                 <Router>
                     <Banner />
                     <Switch>
+                        <Route path="/blog">
+                            <Blog />
+                        </Route>
                         <Route path="/">
                             <Home />
                         </Route>
