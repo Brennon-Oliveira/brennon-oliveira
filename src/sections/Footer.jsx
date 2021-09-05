@@ -1,6 +1,6 @@
-import style from "../../styles/sections/Footer.module.scss";
-import Container from "../../components/Container";
-import Text from "../../components/Text";
+import style from "../styles/sections/Footer.module.scss";
+import Container from "../components/Container";
+import Text from "../components/Text";
 
 export default function Footer() {
     return (

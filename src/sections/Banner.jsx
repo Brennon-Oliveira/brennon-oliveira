@@ -1,6 +1,6 @@
-import Container from "../../components/Container";
-import style from "../../styles/sections/Banner.module.scss";
-import A from "../../components/A";
+import Container from "../components/Container";
+import style from "../styles/sections/Banner.module.scss";
+import A from "../components/A";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -9,9 +9,9 @@ import Header from "./Header";
 
 export default function Banner(props) {
     function toggleMenu(e) {
-        if (e.type === "touchstart") e.preventDefault();
-        let menu = document.querySelector("." + style.menu);
-        let btn = document.querySelector("#" + style.header + " button");
+        if (e?.type === "touchstart") e.preventDefault();
+        let menu = document.querySelector("#menu");
+        let btn = document.querySelector("#menuButton");
         let body = document.querySelector("body");
         menu.classList.toggle("active");
         btn.classList.toggle("active");
@@ -41,17 +41,18 @@ export default function Banner(props) {
                             <div></div>
                         </a>
                     </h1>
-                    <button className={style.menuButton}>
+                    <button id="menuButton" className={style.menuButton}>
                         <span></span>
                     </button>
                 </header>
                 <div className={style.content}>
                     <div className={style.infos} data-aos="fade-right">
                         <h2>
-                            We are a creative group of people who design
-                            influential brands and digital experiences.
+                            {/* We are a creative group of people who design
+                            influential brands and digital experiences. */}
+                            Tudo que você precisa aqui em um só lugar!
                         </h2>
-                        <p>WELCOME TO GLINT</p>
+                        <p>SEJA BEM VINDO</p>
                         <div className={style.buttons}>
                             <A to="Contact">Contato</A>
                             <A>Ferramentas</A>

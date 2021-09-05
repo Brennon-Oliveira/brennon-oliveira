@@ -1,15 +1,17 @@
 import { Link } from "react-scroll";
 import { Element } from "react-scroll";
+import A from "../components/A";
 
-export default function Header({ style, toggleMenu }) {
+export default function Header({ style }) {
     return (
-        <Element name="Home" className={`${style.menu} active`}>
+        <Element id="menu" name="Home" className={`${style.menu} active`}>
             <h2>Menu</h2>
             <nav className={style.options}>
                 <ul>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Home"
                             spy={true}
@@ -19,11 +21,12 @@ export default function Header({ style, toggleMenu }) {
                         >
                             Ferramentas
                             <div></div>
-                        </Link>
+                        </A>
                     </li>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Products"
                             spy={true}
@@ -33,11 +36,12 @@ export default function Header({ style, toggleMenu }) {
                         >
                             Produtos
                             <div></div>
-                        </Link>
+                        </A>
                     </li>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Specialties"
                             spy={true}
@@ -47,11 +51,12 @@ export default function Header({ style, toggleMenu }) {
                         >
                             Especialidades
                             <div></div>
-                        </Link>
+                        </A>
                     </li>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Resume"
                             spy={true}
@@ -61,11 +66,12 @@ export default function Header({ style, toggleMenu }) {
                         >
                             Currículo
                             <div></div>
-                        </Link>
+                        </A>
                     </li>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Projects"
                             spy={true}
@@ -75,11 +81,12 @@ export default function Header({ style, toggleMenu }) {
                         >
                             Projetos
                             <div></div>
-                        </Link>
+                        </A>
                     </li>
                     <li>
-                        <Link
-                            onClick={toggleMenu}
+                        <A
+                            className="menu"
+                            canToggleMenu={true}
                             activeClass="active"
                             to="Contact"
                             spy={true}
@@ -88,14 +95,15 @@ export default function Header({ style, toggleMenu }) {
                             duration={500}
                         >
                             Contato<div></div>
-                        </Link>
+                        </A>
                     </li>
                 </ul>
             </nav>
             <p>
                 Caso precise de alguma informação, por favor entre em{" "}
-                <Link
-                    onClick={toggleMenu}
+                <A
+                    className="menu"
+                    canToggleMenu={true}
                     activeClass="active"
                     to="Contact"
                     spy={true}
@@ -104,7 +112,7 @@ export default function Header({ style, toggleMenu }) {
                     duration={500}
                 >
                     contato
-                </Link>{" "}
+                </A>{" "}
                 na sessão de contato!
             </p>
             <nav className={style.menuSocial}>
