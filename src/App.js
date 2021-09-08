@@ -21,10 +21,10 @@ function App() {
                     <Banner />
                     <Switch>
                         <Route path="/blog/:topic/:post/:class">
-                            <Page />
+                            <Blog />
                         </Route>
                         <Route path="/blog/:topic/:post">
-                            <Page />
+                            <Blog />
                         </Route>
                         <Route path="/blog/:topic">
                             <Blog />
