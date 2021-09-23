@@ -1,6 +1,6 @@
 import Title from "../components/Title";
 import A from "../components/A";
-import Page from "../sections/blog/Page";
+import Post from "../sections/blog/Post";
 export default class Blog {
     style;
     data;
@@ -15,15 +15,20 @@ export default class Blog {
         childrens,
         showMore = false,
         path = "",
+        reload = false,
     }) => {
         return (
             <div className={this.style.topicContainer}>
                 <Title>{parent.title}:</Title>
                 <div className={this.style.blogsList}>
                     {childrens.map((children, childrenIndex) => {
-                        if (!showMore || childrenIndex < 3) {
-                            let link = `blog/${path}${parent.id}/${children.id}`;
-                            console.log(link, "----------", path);
+                        let numberOfItens =
+                            document.body.clientWidth > 1060 ||
+                            document.body.clientWidth < 700
+                                ? 3
+                                : 2;
+                        if (!showMore || childrenIndex < numberOfItens) {
+                            console.log(reload);
                             return (
                                 <A
                                     spy={true}
@@ -31,7 +36,8 @@ export default class Blog {
                                     offset={-30}
                                     duration={500}
                                     to="Search"
-                                    page={link}
+                                    reload={reload}
+                                    page={`blog/${path}${parent.id}/${children.id}`}
                                     className={this.style.blogItem}
                                 >
                                     <div className={this.style.overlay}></div>
@@ -60,17 +66,22 @@ export default class Blog {
     };
 
     #normalizeSize = (toNormalize) => {
-        let rest = toNormalize.length % 3;
+        let numberOfItens =
+            document.body.clientWidth > 1060 || document.body.clientWidth < 700
+                ? 3
+                : 2;
+        console.log(numberOfItens);
+        let rest = toNormalize.length % numberOfItens;
         let normalized = [...toNormalize];
         if (normalized.length === 0) {
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < numberOfItens; i++) {
                 normalized.push({
                     title: "Em desenvolvimento",
                     id: "working",
                 });
             }
         } else if (rest !== 0) {
-            for (let i = 0; i < 3 - rest; i++) {
+            for (let i = 0; i < numberOfItens - rest; i++) {
                 normalized.push({
                     title: "Em desenvolvimento",
                     id: "working",
@@ -105,12 +116,14 @@ export default class Blog {
                                     id: val.id,
                                 },
                                 childrens,
+                                reload: true,
                             });
                         }
                     } else {
                         return this.#defaultComponent({
                             parent: val,
                             childrens,
+                            reload: true,
                             showMore: true,
                         });
                     }
@@ -123,7 +136,9 @@ export default class Blog {
 
     #isPageOrPost = ({ route }) => {
         const topic = this.#getTopicByName(route);
-        if (topic.pages) {
+        if (route.post) {
+            return this.#getPost({ route });
+        } else if (topic.pages) {
             return this.#getPage({ route });
         } else {
             return this.#getPost({ route });
@@ -133,11 +148,10 @@ export default class Blog {
     #getPage = ({ route }) => {
         let topic = this.#getTopicByName(route);
         let page = topic.pages.find((page) => {
-            return page.id === route.post;
+            return page.id === route.page;
         });
         let childrens = page.posts;
         childrens = this.#normalizeSize(childrens);
-
         let result = (
             <>
                 {this.#defaultComponent({
@@ -152,7 +166,17 @@ export default class Blog {
     };
 
     #getPost = ({ route }) => {
-        return <Page />;
+        let data;
+        let topic = this.#getTopicByName(route);
+        data = topic.pages.find((page) => {
+            return page.id === route.page;
+        });
+        if (route.post) {
+            data = data.posts.find((post) => {
+                return post.id === route.post;
+            });
+        }
+        return <Post data={data} />;
     };
 
     getTypeByRoute = ({ route }) => {
@@ -161,7 +185,6 @@ export default class Blog {
         let indexFunction = 0;
 
         const topic = this.#getTopicByName(route);
-
         if (route?.page || route?.post) {
             indexFunction = 1;
         }

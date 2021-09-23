@@ -1,17 +1,10 @@
 import "./styles/global.scss";
 import Home from "./pages/Home";
-import {
-    Route,
-    BrowserRouter as Router,
-    Switch,
-    useParams,
-} from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import AppProvider from "./context/AppContext";
 import Banner from "./sections/Banner";
 import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
-import Page from "./sections/blog/Page";
-import { useState } from "react";
 
 function App() {
     return (
@@ -20,10 +13,10 @@ function App() {
                 <Router>
                     <Banner />
                     <Switch>
-                        <Route path="/blog/:topic/:post/:class">
+                        <Route path="/blog/:topic/:page/:post">
                             <Blog />
                         </Route>
-                        <Route path="/blog/:topic/:post">
+                        <Route path="/blog/:topic/:page">
                             <Blog />
                         </Route>
                         <Route path="/blog/:topic">

@@ -17,6 +17,7 @@ export default function A(props) {
     const [canToggleMenu, setCanToggleMenu] = useState(
         props.canToggleMenu || false
     );
+    const [reload, setReload] = useState(props.reload || false);
 
     const { changeRoute, curRoute } = useContext(AppContext);
     let history = useHistory();
@@ -31,15 +32,18 @@ export default function A(props) {
     }
 
     async function pre() {
+        console.log(props.page);
         let toPage = page;
         if (toPage[0] !== "/") {
             toPage = `/${toPage}`;
         }
-        console.log(toPage);
         changeRoute(toPage);
         history.push(toPage);
         if (canToggleMenu) {
             toggleMenu();
+        }
+        if (reload) {
+            window.location.reload();
         }
         await scroll();
     }
