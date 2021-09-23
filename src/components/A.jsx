@@ -32,7 +32,6 @@ export default function A(props) {
     }
 
     async function pre() {
-        console.log(props.page);
         let toPage = page;
         if (toPage[0] !== "/") {
             toPage = `/${toPage}`;

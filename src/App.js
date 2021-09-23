@@ -7,6 +7,15 @@ import Footer from "./sections/Footer";
 import Blog from "./pages/Blog";
 
 function App() {
+    function changeIconTo(icon) {
+        const favicon = document.getElementById("favicon");
+        if (favicon === "blog") {
+            favicon.href = "/blog.ico";
+        } else {
+            favicon.href = "/favicon.ico";
+        }
+    }
+
     return (
         <div className="App">
             <AppProvider>

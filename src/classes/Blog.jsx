@@ -28,7 +28,6 @@ export default class Blog {
                                 ? 3
                                 : 2;
                         if (!showMore || childrenIndex < numberOfItens) {
-                            console.log(reload);
                             return (
                                 <A
                                     spy={true}
@@ -70,7 +69,6 @@ export default class Blog {
             document.body.clientWidth > 1060 || document.body.clientWidth < 700
                 ? 3
                 : 2;
-        console.log(numberOfItens);
         let rest = toNormalize.length % numberOfItens;
         let normalized = [...toNormalize];
         if (normalized.length === 0) {
