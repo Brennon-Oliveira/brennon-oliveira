@@ -16,7 +16,7 @@ export default function Blog() {
         favicon.href = "/blog.ico";
     }, []);
 
-    if (blogData.length > 5) {
+    if (blogData.length > 0) {
         return (
             <>
                 <Navigation />
