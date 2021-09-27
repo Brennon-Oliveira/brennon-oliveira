@@ -17,7 +17,7 @@ export default function AppProvider(props) {
     }
 
     async function getBlogData() {
-        await fetch("http://localhost:5000/getTopics")
+        await fetch("https://brennonaleatorioapi.herokuapp.com/getTopics")
             .then((data) => data.json())
             .then((data) => {
                 setBlogData(data);
