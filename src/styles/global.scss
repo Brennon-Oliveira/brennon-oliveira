@@ -7,6 +7,11 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+
+    &::selection {
+        background-color: #f5f9ff;
+        color: #091121;
+    }
 }
 
 html,

@@ -17,6 +17,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog`}
                             className={style.navigationLink}
                         >
@@ -30,6 +31,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog/${params.topic}`}
                             className={style.navigationLink}
                         >
@@ -43,6 +45,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog/${params.topic}/${params.page}`}
                             className={style.navigationLink}
                         >
@@ -56,6 +59,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Page"
+                            reload={true}
                             page={`blog/${params.topic}/${params.page}/${params.post}`}
                             className={style.navigationLink}
                         >
@@ -76,6 +80,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog`}
                             className={style.navigationLink}
                         >
@@ -89,6 +94,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog/${params.topic}`}
                             className={style.navigationLink}
                         >
@@ -102,6 +108,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog/${params.topic}/${params.page}`}
                             className={style.navigationLink}
                         >
@@ -121,6 +128,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog`}
                             className={style.navigationLink}
                         >
@@ -134,6 +142,7 @@ export default function Navigation() {
                             offset={-30}
                             duration={500}
                             to="Search"
+                            reload={true}
                             page={`blog/${params.topic}`}
                             className={style.navigationLink}
                         >
