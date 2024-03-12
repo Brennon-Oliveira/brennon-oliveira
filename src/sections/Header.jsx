@@ -74,36 +74,6 @@ export default function Header({ style }) {
                             className="menu"
                             canToggleMenu={true}
                             activeClass="active"
-                            to="Resume"
-                            spy={true}
-                            smooth={true}
-                            offset={-30}
-                            duration={500}
-                        >
-                            Currículo
-                            <div></div>
-                        </A>
-                    </li>
-                    <li>
-                        <A
-                            className="menu"
-                            canToggleMenu={true}
-                            activeClass="active"
-                            to="Projects"
-                            spy={true}
-                            smooth={true}
-                            offset={-30}
-                            duration={500}
-                        >
-                            Projetos
-                            <div></div>
-                        </A>
-                    </li>
-                    <li>
-                        <A
-                            className="menu"
-                            canToggleMenu={true}
-                            activeClass="active"
                             to="Contact"
                             spy={true}
                             smooth={true}
