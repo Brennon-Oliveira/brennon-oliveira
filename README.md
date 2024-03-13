@@ -1,4 +1,4 @@
-# Brennon Oliveira 2.0
+# Brennon Oliveira 3.0
 ## Assets
 * [Cores usadas](https://coolors.co/000410-091121-121e32-0e2929-093320-7b7f88-ced2dc-f5f9ff)
 * Fontes:
